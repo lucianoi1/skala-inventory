@@ -23,34 +23,13 @@ const InventorySystem = () => {
   const [loginError, setLoginError] = useState('');
   const [loading, setLoading] = useState(false);
 
-   const ROLES = {
-    'almacenista@skala.com': { 
-      role: 'almacenista', 
-      name: 'Almacenista', 
-      permissions: ['create_exit', 'scan', 'view_inventory'] 
-    },
-    'gerente@skala.com': { 
-      role: 'gerente', 
-      name: 'Gerente de Operaciones', 
-      permissions: ['approve_base_exit', 'view_reports'] 
-    },
-    'representante@skala.com': { 
-      role: 'representante', 
-      name: 'Representante a Bordo', 
-      permissions: ['approve_ship_entry', 'create_ship_exit', 'scan'] 
-    },
-    'supervisor@skala.com': { 
-      role: 'supervisor', 
-      name: 'Supervisor', 
-      permissions: ['scan', 'install_tubes'] 
-    },
-    'lugracia.eta18@gmail.com': { 
-      role: 'administrador', 
-      name: 'Luciano - Administrador', 
-      permissions: ['create_exit', 'scan', 'view_inventory', 'approve_base_exit', 'view_reports', 'approve_ship_entry', 'create_ship_exit', 'install_tubes', 'admin'] 
-    }
+  const ROLES = {
+    'almacenista@skala.com': { role: 'almacenista', name: 'Almacenista', permissions: ['create_exit', 'scan', 'view_inventory'] },
+    'gerente@skala.com': { role: 'gerente', name: 'Gerente de Operaciones', permissions: ['approve_base_exit', 'view_reports'] },
+    'representante@skala.com': { role: 'representante', name: 'Representante a Bordo', permissions: ['approve_ship_entry', 'create_ship_exit', 'scan'] },
+    'supervisor@skala.com': { role: 'supervisor', name: 'Supervisor', permissions: ['scan', 'install_tubes'] }
+    'lugracia.eta18@gmail.com': { role: 'administrador', name: 'Luciano - Administrador', permissions: ['create_exit', 'scan', 'view_inventory','approve_ship_entry','install_tubes']}
   };
-
 
   useEffect(() => {
     if (currentUser) {
