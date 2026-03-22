@@ -12,7 +12,9 @@
     "react-dom": "^18.2.0",
     "lucide-react": "^0.263.1",
     "@supabase/supabase-js": "^2.39.0",
-    "firebase": "^10.8.0"
+    "firebase": "^10.8.0",
+    "react-qr-reader": "^3.0.0-beta-1",
+    "html5-qrcode": "^2.3.8"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.2.1",
